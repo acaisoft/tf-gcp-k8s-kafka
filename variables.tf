@@ -1,5 +1,5 @@
 # Parameters authorized:
-# version (default: v2.9.1)
+# version (default: v2.11.0)
 # values (default: values.yaml)
 variable "helm" {
   type        = "map"
