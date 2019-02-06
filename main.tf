@@ -14,7 +14,6 @@ data "terraform_remote_state" "gke_cluster" {
 data "google_client_config" "current" {}
 
 provider "google" {
-  credentials = "${file(var.provider["credentials_path"])}"
   region      = "${var.provider["region"]}"
   project     = "${var.provider["project"]}"
 }
