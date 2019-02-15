@@ -35,7 +35,7 @@ provider "helm" {
 resource "helm_release" "kafka" {
   name      = "kafka"
   chart     = "incubator/kafka"
-  version   = "0.13.5"
+  version   = "${lookup(var.helm, "chart_version", "0.13.8")}"
   namespace = "kafka"
   values = [
     "${file(lookup(var.helm, "values", "values.yaml"))}"
